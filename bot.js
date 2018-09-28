@@ -29,30 +29,17 @@ const sql = require("sqlite");
 
 
 client.on("message", message => {
-if (message.content === "-help") {
-const embed = new Discord.RichEmbed() 
-      .setColor("#000000") 
-      .setDescription(`
-	  
-	         Please Chose: 
-			 
-${prefix}help1 ⇏    **  | لعرض جميع اوامر البوت**  
+ if (message.content === "-help") {
+  const embed = new Discord.RichEmbed() 
+      .setColor("#000000")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`bot`)
+      .setDescription(`             Please Chose: \n\n${prefix}help1 ⇏    **  | لعرض جميع اوامر البوت**  \n\n${prefix}help-p ⇏    **  | لعرض الاوامر العامه**  \n\n${prefix}help-a ⇏    **  | لعرض الاوامر الاداريه**  \n \n${prefix}help-g ⇏    **  | لعرض الاوامر الالعاب**  \n\n${prefix}help-m ⇏    **  | لعرض الاوامر الاغاني**  \n\nملاحضه البوت محمي بكود الجحفله`)
 
-${prefix}help-p ⇏    **  | لعرض الاوامر العامه**  
+message.author.sendEmbed(embed)
 
-${prefix}help-a ⇏    **  | لعرض الاوامر الاداريه**  
- 
-${prefix}help-g ⇏    **  | لعرض الاوامر الالعاب**  
-
-${prefix}help-m ⇏    **  | لعرض الاوامر الاغاني**  
-
-ملاحضه البوت محمي بكود الجحفله
-
-        `)
-   message.channel.sendEmbed(embed)
-    
-   }
-   }); 
+}
+}); 
    
 
 
