@@ -1,22 +1,7 @@
 const Discord = require('discord.js');
 
 
-Code Alpha© :arrow_down:
-client.on('message' , message => {
-if (message.content === '-help') {
-         let embed = new Discord.RichEmbed()
 
-      .setThumbnail(message.author.avatarURL)    
-      .addField("**الاوامر**","** **")
-      .addField("**help-p**","**  | لعرض الاوامر العامه **")
-      .addField("**help-a**","**  | لعرض الاوامر الاداريه **")
-       .addField("**help-g**","**  | لعرض الاوامر الالعاب **")
-       .addField("**help-m**","**  | لعرض الاوامر الاغاني **")
-
-.setColor('RANDOM')
-  message.author.sendEmbed(embed);
-    }
-});
    
 
 
